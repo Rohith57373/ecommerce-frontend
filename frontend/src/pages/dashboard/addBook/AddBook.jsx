@@ -12,12 +12,14 @@ const AddBook = () => {
     const [imageFileName, setimageFileName] = useState('');
     const [image, setImage] = useState('');
     const [additionalImages, setAdditionalImages] = useState([]);
+    const [loading, setLoading] = useState(false); // <-- loading state
 
     const onSubmit = async (data) => {
+        setLoading(true); // <-- Start loading
         try {
             const result = await axios.post(`${getBaseUrl()}/api/cloud/upload`, {
                 image: image,
-                images: additionalImages, // sending multiple images
+                images: additionalImages,
                 title: data.title,
                 description: data.description,
                 category: data.category,
@@ -46,6 +48,8 @@ const AddBook = () => {
         } catch (error) {
             console.error(error);
             alert("Failed to add book. Please try again.");
+        } finally {
+            setLoading(false); // <-- End loading
         }
     };
 
@@ -68,8 +72,6 @@ const AddBook = () => {
 
     const handleAdditionalImagesChange = (e) => {
         const files = Array.from(e.target.files);
-        const readers = [];
-
         files.forEach(file => {
             const reader = new FileReader();
             reader.readAsDataURL(file);
@@ -166,8 +168,12 @@ const AddBook = () => {
                     ))}
                 </div>
 
-                <button type="submit" className="w-full py-2 bg-green-500 text-white font-bold rounded-md">
-                    Add Book
+                <button
+                    type="submit"
+                    className="w-full py-2 bg-green-500 text-white font-bold rounded-md"
+                    disabled={loading}
+                >
+                    {loading ? 'Adding Book...' : 'Add Book'}
                 </button>
             </form>
         </div>
