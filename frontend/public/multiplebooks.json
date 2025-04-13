@@ -1,0 +1,153 @@
+
+[
+    {
+        "_id": 1,
+        "title": "How to Grow Your Online Store",
+        "description": "Learn the best strategies to grow your online store in today's competitive market.",
+        "category": "business",
+        "trending": true,
+        "coverImage": "book-1.png",
+        "oldPrice": 29.99,
+        "newPrice": 19.99,
+        "images": [
+            "book-3.png",
+            "book-7.png",
+            "book-11.png"
+        ]
+    },
+    {
+        "_id": 2,
+        "title": "Top 10 Fiction Books This Year",
+        "description": "A curated list of the best fiction books that are trending this year.",
+        "category": "books",
+        "trending": true,
+        "coverImage": "book-2.png",
+        "oldPrice": 24.99,
+        "newPrice": 14.99,
+        "images": [
+            "book-5.png",
+            "book-9.png",
+            "book-13.png"
+        ]
+    },
+    {
+        "_id": 3,
+        "title": "Mastering SEO in 2024",
+        "description": "Tips and tricks to boost your SEO and rank higher on search engines.",
+        "category": "marketing",
+        "trending": true,
+        "coverImage": "book-3.png",
+        "oldPrice": 39.99,
+        "newPrice": 29.99,
+        "images": [
+            "book-2.png",
+            "book-6.png",
+            "book-10.png"
+        ]
+    },
+    {
+        "_id": 4,
+        "title": "Best eCommerce Platforms",
+        "description": "A comprehensive guide on choosing the best eCommerce platforms for 2024.",
+        "category": "business",
+        "trending": false,
+        "coverImage": "book-4.png",
+        "oldPrice": 49.99,
+        "newPrice": 39.99,
+        "images": [
+            "book-1.png",
+            "book-8.png",
+            "book-15.png"
+        ]
+    },
+    {
+        "_id": 5,
+        "title": "Non-Fiction Reads You Must Try",
+        "description": "Our top picks for non-fiction books to add to your reading list.",
+        "category": "books",
+        "trending": true,
+        "coverImage": "book-5.png",
+        "oldPrice": 19.99,
+        "newPrice": 9.99,
+        "images": [
+            "book-4.png",
+            "book-14.png",
+            "book-18.png"
+        ]
+    },
+    {
+        "_id": 6,
+        "title": "Social Media Marketing Strategies",
+        "description": "Improve your social media presence and engagement with these expert strategies.",
+        "category": "marketing",
+        "trending": true,
+        "coverImage": "book-6.png",
+        "oldPrice": 34.99,
+        "newPrice": 24.99,
+        "images": [
+            "book-3.png",
+            "book-10.png",
+            "book-17.png"
+        ]
+    },
+    {
+        "_id": 7,
+        "title": "The Future of AI in Business",
+        "description": "Explore how AI is transforming business and what to expect in the future.",
+        "category": "business",
+        "trending": false,
+        "coverImage": "book-7.png",
+        "oldPrice": 44.99,
+        "newPrice": 34.99,
+        "images": [
+            "book-6.png",
+            "book-12.png",
+            "book-20.png"
+        ]
+    },
+    {
+        "_id": 8,
+        "title": "Self-Improvement Books That Change Lives",
+        "description": "A list of self-improvement books that have made a lasting impact.",
+        "category": "books",
+        "trending": true,
+        "coverImage": "book-8.png",
+        "oldPrice": 27.99,
+        "newPrice": 17.99,
+        "images": [
+            "book-2.png",
+            "book-7.png",
+            "book-16.png"
+        ]
+    },
+    {
+        "_id": 9,
+        "title": "Email Marketing Mastery",
+        "description": "Learn how to craft effective email marketing campaigns that convert.",
+        "category": "marketing",
+        "trending": true,
+        "coverImage": "book-9.png",
+        "oldPrice": 32.99,
+        "newPrice": 22.99,
+        "images": [
+            "book-5.png",
+            "book-13.png",
+            "book-19.png"
+        ]
+    },
+    {
+        "_id": 10,
+        "title": "The Art of Leadership",
+        "description": "Develop your leadership skills and lead your team to success.",
+        "category": "business",
+        "trending": false,
+        "coverImage": "book-10.png",
+        "oldPrice": 39.99,
+        "newPrice": 29.99,
+        "images": [
+            "book-1.png",
+            "book-9.png",
+            "book-15.png"
+        ]
+    }
+]
