@@ -11,11 +11,13 @@ const AddBook = () => {
     const [imageFile, setimageFile] = useState(null);
     const [imageFileName, setimageFileName] = useState('');
     const [image, setImage] = useState('');
+    const [additionalImages, setAdditionalImages] = useState([]);
 
     const onSubmit = async (data) => {
         try {
             const result = await axios.post(`${getBaseUrl()}/api/cloud/upload`, {
                 image: image,
+                images: additionalImages, // sending multiple images
                 title: data.title,
                 description: data.description,
                 category: data.category,
@@ -40,6 +42,7 @@ const AddBook = () => {
             setimageFileName('');
             setimageFile(null);
             setImage('');
+            setAdditionalImages([]);
         } catch (error) {
             console.error(error);
             alert("Failed to add book. Please try again.");
@@ -61,6 +64,19 @@ const AddBook = () => {
             setimageFileName(file.name);
             previewFiles(file);
         }
+    };
+
+    const handleAdditionalImagesChange = (e) => {
+        const files = Array.from(e.target.files);
+        const readers = [];
+
+        files.forEach(file => {
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onloadend = () => {
+                setAdditionalImages(prev => [...prev, reader.result]);
+            };
+        });
     };
 
     return (
@@ -132,6 +148,23 @@ const AddBook = () => {
                 </div>
 
                 <img src={image} alt="" className="mb-4 max-h-60 object-cover" />
+
+                <div className="mb-4">
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">Additional Images</label>
+                    <input
+                        type="file"
+                        accept="image/*"
+                        multiple
+                        onChange={handleAdditionalImagesChange}
+                        className="mb-2 w-full"
+                    />
+                </div>
+
+                <div className="mb-4">
+                    {additionalImages.map((img, index) => (
+                        <img key={index} src={img} alt={`Additional image ${index + 1}`} className="mb-4 max-h-60 object-cover" />
+                    ))}
+                </div>
 
                 <button type="submit" className="w-full py-2 bg-green-500 text-white font-bold rounded-md">
                     Add Book
